@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anon - eCommerce Website</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./Home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+<div class="header-main">
+    <div class="container">
+      <a href="#" class="header-logo">
+        <img
+          src="./assets/images/logo/logo.svg"
+          alt="Anon's logo"
+          width="120"
+          height="36"
+        />
+      </a>
+      <div class="header-search-container">
+        <input
+          id="search" 
+          type="text"
+          name="search"
+          class="search-field"
+          placeholder="Enter your product name..."
+          oninput="searchItems()"
+        />
+        <button class="search-btn" >
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="#">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Catagery
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <div class="categorization">
+                    <select id="categorySelect" onchange="getDataFromApi()">
+                      <option id="all" value="all" selected>all</option>
+                      <option id="mensClothing" value="men's clothing">men's clothing</option>
+                      <option id="jewelry" value="jewelery">jewelery</option>
+                      <option id="electronics" value="electronics">electronics</option>
+                      <option id="womensClothing" value="women's clothing">women's clothing</option>
+                    </select>
+                  </div>
+                </div>
+            </div>
+          <a href="./register.html"><button class="normal" style="background-color: bisque;">Sign In</button></a>
+          <a href=""><i class="fa fa-shopping-bag fff"></i></a>
+        </ul>
+      </div>
+      <div class="header-user-actions">
+        <button class="action-btn">
+          <ion-icon name="person-outline"></ion-icon>
+        </button>
+
+        <button class="action-btn cart" onclick = "window.location.assign('cart/cart.html')">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <span class="count">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="hero">
+  <h1>Sale 20% Off</h1>
+  <h2> On Everything</h2>
+  <p> Explicabo esse amet tempora quibusdam laudantium,
+      <br> laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias,<br>
+       veniam, vel architecto veritatis delectus repellat modi impedit sequi. </p>
+  <button class="hero">Shop Now</button>
+</section>
+
+<div class="form-container prices">
+    <label for="min-price">Minimum Price:</label>
+    <input type="number" id="min-price" name="min-price" class="form-input" oninput="filterItems()">
+    <label for="max-price">Maximum Price:</label>
+    <input type="number" id="max-price" name="max-price" class="form-input" oninput="filterItems()">
+</div>
+<div id="container" class="pro-container">
+
+</div>
+
+<section id="banner" class="section-m1">
+  <h4> Repair Services</h4>
+  <h2>Up to<span> 70% off</span>- All t-shirts & Accessories </h2>
+<button class="normal">Explore More</button>
+</section>
+<section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+      <h4>Sign Up For Newsletter</h4>
+      <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
+  </div>
+      <div class="form">
+      <input type="text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+
+  </div>
+  
+  </div>
+
+</section>
+<!------------------------------Footer--------------------------------->
+<footer class="section-p1">
+  <img src="./assets/images/logo/logo.svg"alt="" style="width: 100px;
+      height: 50px; ">
+  <div class="col">
+      <h4>Contact</h4>
+      <p> <strong>Address:</strong>cairo</p>
+      <p> <strong>phone:</strong>0122364789</p>
+      <p> <strong>Hours:</strong>10:00 - 18:00 </p>
+      <div class="follow">
+          <h4>follow us</h4>
+          <div class="icon">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+              <i class="fab fa-youtube"></i>
+
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <h4>About</h4>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Tetms & Conditions</a>
+      <a href="#">Contact Us</a>
+  </div>
+
+  <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+  </div>
+   <div  class="col install">
+      <h4>Inatall App</h4>
+      <p>From App Store or Google play</p>
+      <div class="row">
+          <img src="img/pay/app.jpg"alt="">
+          <img src="img/pay/play.jpg"alt="">
+      </div>
+<p> Secured Payment Geteways</p>
+<img src="img/pay/pay.png"alt="">
+   </div>
+</footer>
+<div class="copyright">
+  <p> Copyright 2023 &copy , G1 </p>
+</div>
+<script src="./Home.js"></script>
+<script src="script.js"></script>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
+
+</body>
+</html>

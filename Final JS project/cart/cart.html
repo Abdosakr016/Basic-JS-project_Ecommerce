@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="../Home.css">
+    <title>My cart</title>
+</head>
+<body>
+    <div class="header-main">
+        <div class="container">
+          <a href="#" class="header-logo">
+            <img
+              src=".././assets/images/logo/logo.svg"
+              alt="Anon's logo"
+              width="120"
+              height="36"
+            />
+          </a>
+          <div class="header-search-container">
+            <input
+              id="search" 
+              type="text"
+              name="search"
+              class="search-field"
+              placeholder="Enter your product name..."
+              oninput="searchItems()"
+            />
+            <button class="search-btn" >
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+          <div>
+            <ul id="navbar">
+              <li><a class="active" href="#">Home</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">Catagery
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <div class="categorization">
+                        <select id="categorySelect" onchange="getDataFromApi()">
+                          <option id="all" value="all" selected>all</option>
+                          <option id="mensClothing" value="men's clothing">men's clothing</option>
+                          <option id="jewelry" value="jewelery">jewelery</option>
+                          <option id="electronics" value="electronics">electronics</option>
+                          <option id="womensClothing" value="women's clothing">women's clothing</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+              <a href="./register.html"><button class="normal" style="background-color: bisque;">Sign In</button></a>
+              <a href=""><i class="fa fa-shopping-bag fff"></i></a>
+            </ul>
+          </div>
+          <div class="header-user-actions">
+            <button class="action-btn">
+              <ion-icon name="person-outline"></ion-icon>
+            </button>
+    
+            <button class="action-btn cart" onclick = "window.location.assign('cart/cart.html')">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              <span class="count">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="totalPrice">
+        <h2>Total Price is:</h2>
+        <h1></h1>
+    </div>
+    <div class="containerCard"></div>
+    <script src="./cart.js"></script>
+</body>
+</html>

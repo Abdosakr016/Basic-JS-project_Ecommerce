@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{background-color:rgb(202, 201, 201) ;}
+.continer{
+    width: 80%;
+    margin: auto;
+}
+header{
+    height: 70px;
+    padding: 10px 10px ;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+}
+.header-content .brand{
+    font-size: 2em ;
+    color: #fff;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+a{
+text-decoration: none;
+}
+nav li a{
+    display: block;
+    color: #fff;
+    min-width: 80px;
+    padding: 5px;
+    margin: 0px 5px;
+}
+/* //////////////////form//////////////////// */
+img{
+    max-width: 25%;
+}
+.section-form{
+    margin-top: 50px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+width: 35%;
+text-align: center;
+background-color: #fff;
+border-radius: 10px;
+overflow: hidden;
+padding: 20px;
+
+}
+.section-form h2{
+    font-family: Poppins-Bold;
+    color: #333;
+    line-height: 1.2;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.section-form form input{
+    outline: none;
+    padding: 5px ;
+    font-family: Poppins-Medium;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.2;
+    display: block;
+    width: 90%;
+    height:55px;
+    background: 0 0;
+  
+    
+}
+.section-form form input[type="submit"]:hover{
+    opacity: 0.5;
+}
+nav ul#user_info{
+display: none;
+}
+.header{
+    height: 100vh;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+form  .user-data input{
+    display: inline-block;
+    border-bottom: 2px solid #d9d9d9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+ 
+}
+.contactt{
+    text-align: left;
+    margin-bottom: 20px;
+   
+}
+.dataa{
+    text-align: left;
+    margin-bottom: 20px;
+   
+}
+
+.btn input[type="submit"] {
+    
+background:#7a6664;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 259px;
+    overflow: hidden;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    color: #fff;
+
+}
+input[type="submit"]{
+    font-family: Poppins-Medium; 
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.icons .face{
+    background-color: #3b5998;
+}
+.icons .twitter{
+    background-color: #1da1f2;
+}
+.icons .google{
+    background-color: #ea4335;
+}
+.icon {
+    margin-top: 50px;
+}
+.icons a {
+    margin-top: 30px;
+    display: inline-block;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+}
+a i {
+    padding-top: 15px;
+    font-size: 20px;
+    color: #fff;
+}
+.check input[type="checkbox"]{
+    width: 28px;
+    height: 18px;
+    border-radius: 3px;
+    background: #fff;
+margin-bottom: 30px;
+border: 2px solid #bb5a51;
+}
+.check {
+    display: flex;
+}
+span{
+    font-family: Poppins-Regular;
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+    padding-left: 7px;
+}

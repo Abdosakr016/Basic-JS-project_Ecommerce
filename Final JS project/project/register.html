@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="all.css"> -->
+    <title>register</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="brand">shopping cart</a>
+
+          <nav>
+            <ul id="link">
+              <li><a href="login.html">sign in</a></li>
+              <li><a href="register.html">sign up</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-form">
+      <img src="scroll-top.png" alt="logo" />
+      <p style="font-size: 20px">Please fill in this form</p>
+      <!-- Registeration Form -->
+      <form id="registration-form">
+        <!--Username input  -->
+        <div class="user-data">
+          <i class="far fa-user"></i>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your Name:"
+            required
+            onblur="this.style.border='none'; validateName();"
+          />
+          <span id="fullname-error" class="error"></span>
+        </div>
+
+        <!-- Email input -->
+        <div class="user-data">
+          <i class="far fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Email"
+            id="email"
+            required
+          />
+          <span id="email-error" class="error"></span>
+        </div>
+
+        <!-- Password input -->
+        <div class="user-data">
+          <i class="fas fa-unlock-alt"></i>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            id="password"
+            required
+          />
+        </div>
+
+        <!-- repeat passord input -->
+        <div class="user-data">
+          <i class="fas fa-unlock-alt"></i>
+          <input
+            type="password"
+            name="repeat-password"
+            placeholder="Enter Repeat Password"
+            id="repeat-password"
+            required
+            onblur="validatePassword();"
+          />
+          <span id="password-error" class="error"></span>
+        </div>
+
+        <!-- submission -->
+        <div class="btn">
+          <input
+            type="submit"
+            value="sign up"
+            id="sign_up"
+            onclick="submitForm(event);"
+          />
+        </div>
+        <!-- social media -->
+        <div class="icons">
+          <a href="" class="face"><i class="fab fa-facebook-f"></i></a>
+          <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="" class="google"><i class="fab fa-google"></i></a>
+        </div>
+      </form>
+    </section>
+
+    <script src="./register.js"></script>
+  </body>
+</html>
